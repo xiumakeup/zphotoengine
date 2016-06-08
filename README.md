@@ -107,19 +107,21 @@ zphotoengine是一个基本的PC版图像处理dll库，里面包含了动态库
 	*************************************************/
     EXPORT int ZPHOTO_Desaturate(unsigned char *srcData, int width, int height, int stride);//去色
     
-   /*************************************************
+    
+      /*************************************************
+   
 	Function:    ZPHOTO_CurveAdjust
 	Description: 曲线调节
 	Input:       srcData-原始图像，格式为32位BGRA格式，执行后修为结果图像
 	             width-原始图像宽度
-				 height-原始图像高度
-				 stride-原始图像的Stride
-				 destChannel-通道选择，Gray通道-0，R通道-1，G通道-2，B通道-3
-				 inputLeftLimit-输入最小值，范围[0,255]
-				 inputMiddle-输入中间值，范围[0,255]
-				 inputRightLimit-输入最大值，范围[0,255]
-				 outputLeftLimit-输出最小值，范围[0,255]
-				 outputRightLimit-输出最大值，范围[0,255]
+			height-原始图像高度
+			stride-原始图像的Stride
+			destChannel-通道选择，Gray通道-0，R通道-1，G通道-2，B通道-3
+			inputLeftLimit-输入最小值，范围[0,255]
+			inputMiddle-输入中间值，范围[0,255]
+			inputRightLimit-输入最大值，范围[0,255]
+			outputLeftLimit-输出最小值，范围[0,255]
+			outputRightLimit-输出最大值，范围[0,255]
 	Output:      无.
 	Return:      0-成功,其他失败.
 	Others:      无.
@@ -144,6 +146,7 @@ zphotoengine是一个基本的PC版图像处理dll库，里面包含了动态库
 	Return:      0-成功,其他失败.
 	Others:      无.
 	*************************************************/
+	
     EXPORT int ZPHOTO_ColorLevelAdjust(unsigned char * srcData , int width, int height ,int stride , int destChannel, unsigned char inputLeftLimit, float inputMiddle, unsigned char inputRightLimit, unsigned char outputLeftLimit , unsigned char outputRightLimit);//色阶调整
 	/*************************************************
 	Function:    ZPHOTO_NLinearBrightContrastAdjust
