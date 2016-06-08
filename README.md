@@ -3,8 +3,7 @@ zphotoengine是一个基本的PC版图像处理dll库，里面包含了动态库
 调用库包含了PS所有图层混合处理算法，以及常用图像处理函数库。具体函数接口如下：
 
 
-
-       /*************************************************
+    /*************************************************
 	Function:    ZPHOTO_SaturationAdjust
 	Description: 饱和度调节.
 	Input:       srcData-原始图像，格式为32位BGRA格式，执行后修为结果图像
@@ -16,6 +15,7 @@ zphotoengine是一个基本的PC版图像处理dll库，里面包含了动态库
 	Return:      0-成功,其他失败.
 	Others:      无.
 	*************************************************/
+	
     EXPORT int ZPHOTO_SaturationAdjust(unsigned char* srcData,int width, int height, int stride, int saturation);
 	/*************************************************
 	Function:    ZPHOTO_Posterize
@@ -29,6 +29,7 @@ zphotoengine是一个基本的PC版图像处理dll库，里面包含了动态库
 	Return:      0-成功,其他失败.
 	Others:      无.
 	*************************************************/
+	
     EXPORT int ZPHOTO_Posterize(unsigned char *srcData, int width, int height, int stride, int clusterNum);
 	/*************************************************
 	Function:    ZPHOTO_OverExposure
@@ -105,6 +106,7 @@ zphotoengine是一个基本的PC版图像处理dll库，里面包含了动态库
 	Others:      无.
 	*************************************************/
     EXPORT int ZPHOTO_Desaturate(unsigned char *srcData, int width, int height, int stride);//去色
+    
    /*************************************************
 	Function:    ZPHOTO_CurveAdjust
 	Description: 曲线调节
@@ -122,6 +124,7 @@ zphotoengine是一个基本的PC版图像处理dll库，里面包含了动态库
 	Return:      0-成功,其他失败.
 	Others:      无.
 	*************************************************/
+	
     EXPORT int ZPHOTO_CurveAdjust(unsigned char * srcData , int width, int height ,int stride , int DestChannel, unsigned char InputLeftLimit, unsigned char InputMiddle, unsigned char InputRightLimit, unsigned char OutputLeftLimit , unsigned char OutputRightLimit);
 
 	/*************************************************
