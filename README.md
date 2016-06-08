@@ -2,33 +2,9 @@
 zphotoengine是一个基本的PC版图像处理dll库，里面包含了动态库和静态库供大家调用。
 调用库包含了PS所有图层混合处理算法，以及常用图像处理函数库。具体函数接口如下：
 
-//////////////////////////////////////////////////////////////////////////////
-//图层混合模式
-const int BLEND_MODE_DARKEN                                       =  1;
-const int BLEND_MODE_MULTIPLY                                     =  2;
-const int BLEND_MODE_COLORBURN                                    =  3;
-const int BLEND_MODE_LINEARBURN                                   =  4;
-const int BLEND_MODE_DARKNESS                                     =  5;
-const int BLEND_MODE_LIGHTEN                                      =  6;
-const int BLEND_MODE_SCREEN                                       =  7;
-const int BLEND_MODE_COLORDODGE                                   =  8;
-const int BLEND_MODE_COLORLINEARDODGE                             =  9;
-const int BLEND_MODE_LIGHTCOLOR                                   =  10;
-const int BLEND_MODE_OVERLAY                                      =  11;
-const int BLEND_MODE_SOFTLIGHT                                    =  12;
-const int BLEND_MODE_HARDLIGHT                                    =  13;
-const int BLEND_MODE_VIVIDLIGHT                                   =  14;
-const int BLEND_MODE_LINEARLIGHT                                  =  15;
-const int BLEND_MODE_PINLIGHT                                     =  16;
-const int BLEND_MODE_SOLIDCOLORMIXING                             =  17;
-const int BLEND_MODE_DIFFERENCE                                   =  18;
-const int BLEND_MODE_EXCLUSION                                    =  19;
-const int BLEND_MODE_SUBTRACTION                                  =  20;
-const int BLEND_MODE_DIVIDE                                       =  21;
-///////////////////////////////////////////////////////////////////////////////
-  
-  //基础功能
-	/*************************************************
+
+
+       /*************************************************
 	Function:    ZPHOTO_SaturationAdjust
 	Description: 饱和度调节.
 	Input:       srcData-原始图像，格式为32位BGRA格式，执行后修为结果图像
@@ -369,9 +345,6 @@ const int BLEND_MODE_DIVIDE                                       =  21;
 	Others:      无.
 	*************************************************/
 	EXPORT int ZPHOTO_FindEdges(unsigned char *srcData, int width, int height,int stride, unsigned char *dstData);//查找边缘
-	/////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    //图层混合功能
 	/*************************************************
 	Function:    ZPHOTO_ModeDarken
 	Description: 变暗模式
